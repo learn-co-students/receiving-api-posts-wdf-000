@@ -15,14 +15,17 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @submit_text = "Submit Post"
   end
 
   def create
     @post = Post.create(post_params)
-    redirect_to post_path(@post)
+    render json: @post, status: 201
   end
 
   def edit
+    @post = Post.find(params[:id])
+    @submit_text = "Update Post"
   end
 
   def update
