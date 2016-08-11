@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @submit_action = "Submit Post"
   end
 
   def create
@@ -23,6 +24,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @submit_action = "Update Post"
   end
 
   def update
