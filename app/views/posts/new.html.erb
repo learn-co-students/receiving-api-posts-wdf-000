@@ -28,9 +28,9 @@
       var values = $(this).serialize();
       var posting = $.post('/posts',values);
       posting.done(function(data) {
-	var post = data["post"];
-	$('#postTitle').text(post["title"]);
-	$('#postBody').text(post["description"]);
+      	var post = data["post"];
+      	$('#postTitle').text(post["title"]);
+      	$('#postBody').text(post["description"]);
       });
     });
   });
