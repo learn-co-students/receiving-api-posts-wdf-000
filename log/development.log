@@ -6732,3 +6732,116 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for ::1 at 2016-09-27 21:48:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/_post.html.erb (1.3ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/index.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 472ms (Views: 442.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-09-27 21:48:36 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2.json" for ::1 at 2016-09-27 21:48:37 -0400
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/3.json" for ::1 at 2016-09-27 21:48:38 -0400
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/4.json" for ::1 at 2016-09-27 21:48:39 -0400
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/5.json" for ::1 at 2016-09-27 21:48:39 -0400
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-09-27 21:48:40 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1/post_data" for ::1 at 2016-09-27 21:48:42 -0400
+Processing by PostsController#post_data as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (2.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 49ms (Views: 2.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-27 21:48:45 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 81ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-09-27 21:48:51 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A08gPNSeDuT0bm33KWrEpQIp9ATEktTAPTmTcubKq5JTKoRRt01ev3U/zi/sFFLwukkXfai21xIjLNcK9Nlu4A==", "post"=>{"title"=>"dhai;ldha", "description"=>"sanf;kjadf;jad;f"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "dhai;ldha"], ["description", "sanf;kjadf;jad;f"], ["created_at", "2016-09-28 01:48:51.867456"], ["updated_at", "2016-09-28 01:48:51.867456"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 11ms (Views: 0.9ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/posts" for ::1 at 2016-09-27 21:48:56 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A08gPNSeDuT0bm33KWrEpQIp9ATEktTAPTmTcubKq5JTKoRRt01ev3U/zi/sFFLwukkXfai21xIjLNcK9Nlu4A==", "post"=>{"title"=>"dhai;ldha", "description"=>"fsa;lfjas;jf;as"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "dhai;ldha"], ["description", "fsa;lfjas;jf;as"], ["created_at", "2016-09-28 01:48:56.398806"], ["updated_at", "2016-09-28 01:48:56.398806"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-09-27 21:49:01 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A08gPNSeDuT0bm33KWrEpQIp9ATEktTAPTmTcubKq5JTKoRRt01ev3U/zi/sFFLwukkXfai21xIjLNcK9Nlu4A==", "post"=>{"title"=>"dhai;ldhaf;sajff", "description"=>"fsa;lfjas;jf;as"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "dhai;ldhaf;sajff"], ["description", "fsa;lfjas;jf;as"], ["created_at", "2016-09-28 01:49:01.274445"], ["updated_at", "2016-09-28 01:49:01.274445"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 7ms (Views: 0.5ms | ActiveRecord: 3.0ms)
